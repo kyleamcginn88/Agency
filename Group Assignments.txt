@@ -1,0 +1,10 @@
+Templates:
+Splash -> Mitchell
+About -> Austin
+Ask a Friend(naming?) -> Brian
+Contest page(win an item) -> Kyle
+Contest page(win an item) -> SuitPotato(don't know name)
+Contest page(win an item) -> Ahmad
+
+Models and Database:
+Capturing contest information ->
