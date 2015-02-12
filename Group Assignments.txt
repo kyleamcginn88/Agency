@@ -7,4 +7,9 @@ Contest page(win an item) -> SuitPotato(don't know name)
 Contest page(win an item) -> Ahmad
 
 Models and Database:
-Capturing contest information ->
+Capturing contest information -> Kyle, SuitPotato, Ahmad
+Capturing friend emails -> Brian
+Contest win item -> Austin
+
+Other:
+Polish Splash and base.html for entire website(css editing) -> Mitchell
