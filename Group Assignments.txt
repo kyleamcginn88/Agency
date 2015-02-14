@@ -2,12 +2,12 @@ Templates:
 Splash -> Mitchell
 About -> Austin
 Ask a Friend(naming?) -> Brian
-Contest page(win an item) -> Kyle
-Contest page(win an item) -> SuitPotato(don't know name)
-Contest page(win an item) -> Ahmad
+Contest page 1(win an item) -> Kyle
+Contest page 2(win an item) -> Keith
+Contest page 3(win an item) -> Ahmad
 
 Models and Database:
-Capturing contest information -> Kyle, SuitPotato, Ahmad
+Capturing contest information -> Kyle, Keith, Ahmad
 Capturing friend emails -> Brian
 Contest win item -> Austin
 
