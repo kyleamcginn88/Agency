@@ -5,13 +5,11 @@ Ask a Friend(naming?) -> Brian
 Contest page 1(win an item) -> Kyle
 Contest page 2(win an item) -> Keith
 Contest page 3(win an item) -> Ahmad
-Contest page 4 -> Austin
 
 Models and Database:
-Capturing contest information -> Kyle
-Capturing friend emails -> Brian, Kyle
-Contest win item -> ALL
+Capturing contest information -> Kyle, Keith, Ahmad
+Capturing friend emails -> Brian
+Contest win item -> Austin
 
 Other:
-base.html for entire website(css editing) -> Ahmad
-PEP8 compliance -> Mitchell
+Polish Splash and base.html for entire website(css editing) -> Mitchell

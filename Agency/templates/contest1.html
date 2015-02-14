@@ -4,7 +4,8 @@
 {% block nav-performances %}class="active"{% endblock %}
 {% block titleBlock %} Performance {% endblock %}
 {% block content %}
+{% csrf_token %}
 
-
-
+{{form}}
 {% endblock %}
+<input type="submit value = "Submit"/>
