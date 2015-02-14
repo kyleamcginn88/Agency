@@ -37,7 +37,7 @@ def contest1(request):
 		    c.age = form.cleaned_data["age"]
 		    c.name = form.cleaned_data["name"]
 		    c.save()
-		    return HttpResponseRedirect("/thanks/")
+		    return HttpResponseRedirect("/")
     elif request.method == 'GET':
 	    form = Contest1Form()
     else:
