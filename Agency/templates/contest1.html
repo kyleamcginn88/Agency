@@ -2,11 +2,21 @@
 
 
 {% block nav-performances %}class="active"{% endblock %}
-{% block titleBlock %} Performance {% endblock %}
+{% block titleBlock %} Bike Contest {% endblock %}
 {% block content %}
 <form action="contest1" method = "POST">
     {% csrf_token %}
-    {{form}}
+	<h2> Win a new single-track bike!</h2>
+	
+	<img src="static/img/flexi_bike.jpg" alt="Flexibike" style="width:304px;height:228px" title="http://www.yankodesign.com/images/design_news/2013/10/17/flexi_bike.jpg">
+	
+	<br></br>
+	<p> Your Name: </p>
+    <p>{{form.name}}</p>
+	<p> Your Age: </p>
+	<p>{{form.age}}</p>
+	<p> Your Email: </p>
+	<p>{{form.email}}</p>
     <input type="submit" value = "Submit"/>
 </form>
 {% endblock %}

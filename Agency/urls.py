@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 	url(r'^contest1$', 'Agency.views.contest1', name='contest1'),
 	url(r'^contest2$', 'Agency.views.contest2', name='contest2'),
 	url(r'^contest3$', 'Agency.views.contest3', name='contest3'),
+	url(r'^thanks$', 'Agency.views.thanks', name='thanks'),
 	
     url(r'^admin/', include(admin.site.urls)),
 )

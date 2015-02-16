@@ -10,6 +10,9 @@ from Agency.forms import Contest1Form
 
 def home(request):
     return render(request, 'home.html', {})
+	
+def thanks(request):
+    return render(request, 'thanks.html', {})
 
 def about(request):
     return render(request,'about.html', {})
@@ -26,8 +29,6 @@ def contest2(request):
 def contest3(request):
 	return render(request, 'contest3.html', {})
 	
-
-	
 def contest1(request):
     if request.method == 'POST':
 	    form = Contest1Form(request.POST)
@@ -37,7 +38,7 @@ def contest1(request):
 		    c.age = form.cleaned_data["age"]
 		    c.name = form.cleaned_data["name"]
 		    c.save()
-		    return HttpResponseRedirect("/")
+		    return HttpResponseRedirect("/thanks")
     elif request.method == 'GET':
 	    form = Contest1Form()
     else:
