@@ -2,12 +2,12 @@ from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
 from Agency.models import Contest1
-#from Agency.models import Contest
+from Agency.models import Contest2
 from django import forms
 from django.http import HttpResponseRedirect
 from django.db import models
 from Agency.forms import Contest1Form
-#from Agency.forms import Contest2Form
+from Agency.forms import Contest2Form
 
 
 def home(request):
