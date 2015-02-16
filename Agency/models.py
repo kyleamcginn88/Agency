@@ -7,7 +7,7 @@ class Contest1(models.Model):
 	
 class Contest2(models.Model):
 	first_name = models.CharField(default="", max_length=128)
-	last_name = models.CharField(default="", max_length)
+	last_name = models.CharField(default="", max_length=128)
 	age = models.IntegerField()
 	email = models.EmailField()
 	zip = models.IntegerField()
