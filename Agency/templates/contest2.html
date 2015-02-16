@@ -1,4 +1,29 @@
 {% extends "base.html" %}
 
 {% block nav-store %}class="active"{% endblock %}
-{% block titleBlock %}Store{% endblock %}
+{% block titleBlock %}Imagine Dragons Sweepstakes{% endblock %}
+{% block content %}
+<form action="contest2" method="POST">
+	{% csrf_token %}
+	<h2> Enter the Imagine Dragons Sweepstakes </h2>
+	<img src="static/img/smokes_and_mirrors.jpg" alt="Smokes and Mirrors" style="width:600px;height:600px" title="http://thenewtransmission.co.uk/2015/02/14/album-review-imagine-dragons-smoke-and-mirrors/">
+	
+	<br><br>
+	<h3>Example Text:</h3>
+	
+	<p>First Name:</p>
+	<p>{{form2.first_name}}</p>
+	<p>Last Name:</p>
+	<p>{{form2.last_name}}</p>
+	<p>Age:</p>
+	<p>{{form2.age}}</p>
+	<p>Email</p>
+	<p>{{form2.email}}</p>
+	<p>Zip Code:</p>
+	<p>{{form2.zip}}</p>
+	<p>Phone Number</p>
+	<p>{{form2.phone}}</p>
+	<input type="submit" value="Submit"/>
+</form>
+	
+{% endblock %}
