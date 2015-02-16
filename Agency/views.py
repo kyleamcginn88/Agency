@@ -27,22 +27,22 @@ def friend(request):
 
 def contest2(request):
 	if request.method == 'POST':
-	    form = Contest2Form(request.POST)
-	    if form.is_valid():
+	    form2 = Contest2Form(request.POST)
+	    if form2.is_valid():
 			x = Contest2()
-			x.first_name = form.cleaned_data["first_name"]
-			x.last_name = form.cleaned_data["last_name"]
-			x.age = form.cleaned_data["age"]
-			x.email = form.cleaned_data["email"]
-			x.zip = form.cleaned_data["zip"]
-			x.phone = form.cleaned_data["phone"]
+			x.first_name = form2.cleaned_data["first_name"]
+			x.last_name = form2.cleaned_data["last_name"]
+			x.age = form2.cleaned_data["age"]
+			x.email = form2.cleaned_data["email"]
+			x.zip = form2.cleaned_data["zip"]
+			x.phone = form2.cleaned_data["phone"]
 			x.save()
 			return HttpResponseRedirect("/friend")
 	elif request.method == 'GET':
-		form = Contest2Form()
+		form2 = Contest2Form()
 	else:
 		return HttpResponseRedirect("/404/")
-	return render(request, "contest2.html", {"form" : form})
+	return render(request, "contest2.html", {"form2" : form2})
 	
 def contest3(request):
 	return render(request, 'contest3.html', {})
