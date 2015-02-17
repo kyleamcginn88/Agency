@@ -11,93 +11,104 @@ from Agency.forms import Contest1Form, Contest2Form, Friend3Form
 def home(request):
     return render(request, 'home.html', {})
 
+
+def splash(request):
+    return render(request, 'splash.html', {})
+
+
 def thanks(request):
     return render(request, 'thanks.html', {})
 
+
 def about(request):
-    return render(request,'about.html', {})
+    return render(request, 'about.html', {})
+
 
 def services(request):
-    return render(request,'services.html', {})
+    return render(request, 'services.html', {})
+
 
 def contest1(request):
-    return render(request,'contest1.html', {})
+    return render(request, 'contest1.html', {})
+
 
 def contest2(request):
-    return render(request,'contest1.html', {})
+    return render(request, 'contest1.html', {})
+
 
 def contest3(request):
-    return render(request,'contest1.html', {})
+    return render(request, 'contest1.html', {})
+
 
 def contact(request):
-    return render(request,'contact.html', {})
-
-
-
-
+    return render(request, 'contact.html', {})
 
 
 def friend(request):
-	if request.method == 'POST':
-		from3 = Friend3Form(request.POST)
-		if form3.is_valid():
-			f = Friend()
-			f.user_frist_name = form3.cleand_data["user_frist_name"]
-			f.age = form3.cleaned_data["age"]
-			f.user_email = form3.cleand_data["user_email"]
-			f.friend_name1 = form3.cleand_data["friend_name1"]
-			f.friend1_email = form3.cleand_data["friend1_email"]
-			f.friend_name2 = form3.cleand_data["friend_name2"]
-			f.friend2_email = form3.cleand_data["friend2_email"]
-			f.friend_name3 = form3.cleand_data["friend_name3"]
-			f.friend3_email = form3.cleand_data["friend3_email"]
-			f.save()
-			return HttpResponseRedirect("/thanks")
-	elif request.method == 'GET':
-		form3 = Friend3Form()
-	else:
-		return HttpResponseRedirect("/404/")
-	return render(request, 'friend.html', {"form3":form3})
+    if request.method == 'POST':
+        from3 = Friend3Form(request.POST)
+        if form3.is_valid():
+            f = Friend()
+            f.user_frist_name = form3.cleand_data["user_frist_name"]
+            f.age = form3.cleaned_data["age"]
+            f.user_email = form3.cleand_data["user_email"]
+            f.friend_name1 = form3.cleand_data["friend_name1"]
+            f.friend1_email = form3.cleand_data["friend1_email"]
+            f.friend_name2 = form3.cleand_data["friend_name2"]
+            f.friend2_email = form3.cleand_data["friend2_email"]
+            f.friend_name3 = form3.cleand_data["friend_name3"]
+            f.friend3_email = form3.cleand_data["friend3_email"]
+            f.save()
+            return HttpResponseRedirect("/thanks")
+    elif request.method == 'GET':
+        form3 = Friend3Form()
+    else:
+        return HttpResponseRedirect("/404/")
+    return render(request, 'friend.html', {"form3": form3})
 
-#def contest1(request):
-#    return render(request,'contest1.html', {'contest1': Contest1.objects.all()})
+"""def contest1(request):
+    return render(request,'contest1.html',
+        {'contest1': Contest1.objects.all()})"""
+
 
 def contest2(request):
-	if request.method == 'POST':
-	    form2 = Contest2Form(request.POST)
-	    if form2.is_valid():
-			x = Contest2()
-			x.first_name = form2.cleaned_data["first_name"]
-			x.last_name = form2.cleaned_data["last_name"]
-			x.age = form2.cleaned_data["age"]
-			x.email = form2.cleaned_data["email"]
-			x.zip = form2.cleaned_data["zip"]
-			x.phone = form2.cleaned_data["phone"]
-			x.save()
-			return HttpResponseRedirect("/friend")
-	elif request.method == 'GET':
-		form2 = Contest2Form()
-	else:
-		return HttpResponseRedirect("/404/")
-	return render(request, "contest2.html", {"form2" : form2})
-	
+    if request.method == 'POST':
+        form2 = Contest2Form(request.POST)
+        if form2.is_valid():
+            x = Contest2()
+            x.first_name = form2.cleaned_data["first_name"]
+            x.last_name = form2.cleaned_data["last_name"]
+            x.age = form2.cleaned_data["age"]
+            x.email = form2.cleaned_data["email"]
+            x.zip = form2.cleaned_data["zip"]
+            x.phone = form2.cleaned_data["phone"]
+            x.save()
+            return HttpResponseRedirect("/friend")
+    elif request.method == 'GET':
+        form2 = Contest2Form()
+    else:
+        return HttpResponseRedirect("/404/")
+    return render(request, "contest2.html", {"form2": form2})
+
+
 def contest3(request):
-	return render(request, 'contest3.html', {})
-	
+    return render(request, 'contest3.html', {})
+
+
 def contest1(request):
     if request.method == 'POST':
-	    form = Contest1Form(request.POST)
-	    if form.is_valid():
-		    c = Contest1()
-		    c.email = form.cleaned_data["email"]
-		    c.age = form.cleaned_data["age"]
-		    c.name = form.cleaned_data["name"]
-		    c.zip = form2.cleaned_data["zip"]
-		    c.save()
-		    return HttpResponseRedirect("/friend")
+        form = Contest1Form(request.POST)
+        if form.is_valid():
+            c = Contest1()
+            c.email = form.cleaned_data["email"]
+            c.age = form.cleaned_data["age"]
+            c.name = form.cleaned_data["name"]
+            c.zip = form2.cleaned_data["zip"]
+            c.save()
+            return HttpResponseRedirect("/friend")
     elif request.method == 'GET':
-	    form = Contest1Form()
+        form = Contest1Form()
     else:
-	    return HttpResponseRedirect("/404/")
-		
-    return render(request, "contest1.html", {"form" : form})
+        return HttpResponseRedirect("/404/")
+
+    return render(request, "contest1.html", {"form": form})
