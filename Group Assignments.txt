@@ -12,4 +12,4 @@ Capturing friend emails -> Brian
 Contest win item -> Austin
 
 Other:
-Polish Splash and base.html for entire website(css editing) -> Mitchell
+base.html for entire website(css editing) -> Ahmad

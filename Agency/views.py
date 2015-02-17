@@ -1,16 +1,11 @@
 from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
-from Agency.models import Contest1
-from Agency.models import Contest2
-from Agency.models import Friend
+from Agency.models import Contest1, Contest2, Friend
 from django import forms
 from django.http import HttpResponseRedirect
 from django.db import models
-from Agency.forms import Contest1Form
-from Agency.forms import Contest2Form
-from Agency.forms import Friend3Form
-
+from Agency.forms import Contest1Form, Contest2Form, Friend3Form
 
 def home(request):
     return render(request, 'home.html', {})
@@ -76,8 +71,9 @@ def contest1(request):
 		    c.email = form.cleaned_data["email"]
 		    c.age = form.cleaned_data["age"]
 		    c.name = form.cleaned_data["name"]
+		    c.zip = form2.cleaned_data["zip"]
 		    c.save()
-		    return HttpResponseRedirect("/thanks")
+		    return HttpResponseRedirect("/friend")
     elif request.method == 'GET':
 	    form = Contest1Form()
     else:

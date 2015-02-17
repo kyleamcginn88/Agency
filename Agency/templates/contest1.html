@@ -6,17 +6,28 @@
 {% block content %}
 <form action="contest1" method = "POST">
     {% csrf_token %}
-	<h2> Win a new single-track bike!</h2>
+	<h1> Win a new single-track bike!</h1>
+	
+	<br></br>
+	<h4> Thanks to the competitors at Tour de Flagstaff</h4>
+	<h4> Futuristic bike contest (No purchase necessary)</h4>
 	
 	<img src="static/img/flexi_bike.jpg" alt="Flexibike" style="width:304px;height:228px" title="http://www.yankodesign.com/images/design_news/2013/10/17/flexi_bike.jpg">
 	
 	<br></br>
-	<p> Your Name: </p>
+	
+	<h3> Please fill out the information below, thank you.</h3>
+	
+	<br></br>
+	<p> Name: </p>
     <p>{{form.name}}</p>
-	<p> Your Age: </p>
-	<p>{{form.age}}</p>
-	<p> Your Email: </p>
+	<p> Email: </p>
 	<p>{{form.email}}</p>
+	<p> Age: </p>
+	<p>{{form.age}}</p>
+	<p> Zip: </p>
+	<p>{{form.zip}}</p>
+
     <input type="submit" value = "Submit"/>
 </form>
 {% endblock %}

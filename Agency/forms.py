@@ -2,19 +2,19 @@ from django.shortcuts import render
 from django import forms
 from django.http import HttpResponseRedirect
 from django.db import models
-from Agency.models import Contest1
-from Agency.models import Contest2
-from Agency.models import Friend
+from Agency.models import Contest1, Contest2, Friend
 
 class Contest1Form(forms.Form):
 
     class Meta:
 	    model = Contest1
-	    fields = ['email', 'name', 'age']
+	    fields = ['email', 'name', 'age', 'zip']
 		
     email = forms.EmailField(label="Your email", required=True)
     name = forms.CharField(max_length=128)
+    zip = forms.IntegerField()
     age = forms.IntegerField()
+	
 	
 class Contest2Form(forms.Form):
 	class Meta:
