@@ -1,10 +1,49 @@
 {% extends "base.html" %}
 
 {% block nav-movies %}class="active"{% endblock %}
-{% block titleBlock %} Friends {% endblock %}
+{% block style %} 
+<style>
+    .wrapper{position:relative;}
+    .right{width:50%; position:1;}
+    .right{right:0;}
+</style>
+
+{% endblock %}
+{% block titleBlock %} Friends{% endblock %}
 {% block content %}
+	<h1 align="center">How many of us have them</h1>
+	<h1 align="center">Friends</h1>
+	<div style="float: right;">
+	<h3 align="left">
+<img src="static/img/friends.png" alt="Friends" style="width:304px;height:304px" title="http://pixabay.com/p-158018/?no_redirect">
+	<!--http://pixabay.com/ ,http://pixabay.com/p-158018/?no_redirect -->
+	</h3>
+	</div>
+	<div class = "right">
+<form align="center" action="friend" method = "POST">
+    {% csrf_token %}
+	<h2> Invite a Friend</h2>
+	
 
-    {% include '_carousel.html' %}
-
-
+	<p> Your Name: 
+    {{form3.user_frist_name}}</p>
+	<p> Your Age: 
+	{{form3.age}}</p>
+	<p> Your Email: 
+	{{form3.user_email}}</p>
+	<p> Friend 1 Name: 
+    {{form3.friend_name1}}</p>
+    <p> Friend 1 Email:
+	{{form3.friend_name1}}</p>
+    <p> Friend 2 Name: 
+    {{form3.friend_name2}}</p>
+    <p> Friend 2 Email: 
+	{{form3.friend_name2}}</p>
+    <p> Friend 3 Name: 
+    {{form3.friend_name3}}</p>
+    <p> Friend 3 Email: 
+	{{form3.friend_name3}}</p>
+    <input type="submit" value = "Submit"/>
+</form>
+</div>
 {% endblock %}

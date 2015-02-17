@@ -23,3 +23,5 @@ class Friend(models.Model):
 	friend2_email = models.EmailField()
 	friend_name3 = models.CharField(default="", max_length=128)
 	friend3_email = models.EmailField()
+	
+	

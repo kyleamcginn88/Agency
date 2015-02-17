@@ -1,14 +1,42 @@
 {% extends "base.html" %}
 
-
-{% block nav-performances %}class="active"{% endblock %}
-{% block titleBlock %} Contest Two {% endblock %}
+{% block nav-store %}class="active"{% endblock %}
+{% block titleBlock %}Imagine Dragons Sweepstakes{% endblock %}
 {% block content %}
-
-<body>
-    {% include '_carousel.html' %}
-
-</body>
-
-
+<form action="contest2" method="POST">
+	{% csrf_token %}
+	<h2> Enter the Imagine Dragons Sweepstakes </h2>
+	<img src="static/img/smokes_and_mirrors.jpg" alt="Smokes and Mirrors" style="width:600px;height:600px" title="http://thenewtransmission.co.uk/2015/02/14/album-review-imagine-dragons-smoke-and-mirrors/">
+	
+	<br><br>
+	
+	<h4>You along with two of your friends have a chance to experience the new
+		Imagine Dragons Album! Join the award-winning rock band and experience
+		their album Smokes + Mirrors (out in Feb. 17) in a way that you'd find
+		unbelievable. Rock out to their music, meet and greet the band, in an 
+		exclusive VIP experience. Not only all of this, but enjoy an in flight 
+		performance by Imagine Dragons all the way to Dragons Concert!
+		<br><br>
+		NO PURCHASE IS NECESSARY!!! </h4>
+		<br>
+		<h6>
+		Fill out the necessary info below and have a
+		chance to win the Ultimate Dragons Experience!</h6>
+		<br>
+	
+	<p>First Name:</p>
+	<p>{{form2.first_name}}</p>
+	<p>Last Name:</p>
+	<p>{{form2.last_name}}</p>
+	<p>Age:</p>
+	<p>{{form2.age}}</p>
+	<p>Email</p>
+	<p>{{form2.email}}</p>
+	<p>Zip Code:</p>
+	<p>{{form2.zip}}</p>
+	<p>Phone Number</p>
+	<p>{{form2.phone}}</p>
+	<input type="submit" value="Submit"/>
+</form>
+	
 {% endblock %}

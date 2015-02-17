@@ -1,12 +1,9 @@
-<html lang="en">
 {% extends "base.html" %}
+{% block nav-home %}class="active"{% endblock %}
 {% block titleBlock %}Home {% endblock %}
-{% include '_carousel.html' %}
 {% block content %}
+{% include '_carousel.html' %}
 
-<body class="homepage">
-
-    {% include '_carousel.html' %}
 
     <section id="feature" >
         <div class="container">
@@ -40,7 +37,7 @@
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                         </div>
                     </div><!--/.col-md-4-->
-                
+
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
                             <i class="fa fa-leaf"></i>
@@ -65,16 +62,10 @@
                         </div>
                     </div><!--/.col-md-4-->
                 </div><!--/.services-->
-            </div><!--/.row-->    
+            </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#feature-->
 
 
 
-
-
-
-
-
-</body>
 {% endblock %}
