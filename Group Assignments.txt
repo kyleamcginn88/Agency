@@ -7,9 +7,10 @@ Contest page 2(win an item) -> Keith
 Contest page 3(win an item) -> Ahmad
 
 Models and Database:
-Capturing contest information -> Kyle, Keith, Ahmad
-Capturing friend emails -> Brian
-Contest win item -> Austin
+Capturing contest information -> everyone
+Capturing friend emails -> Brian, Kyle
+Contest win item -> ALL
 
 Other:
 base.html for entire website(css editing) -> Ahmad
+PEP8 compliance -> Mitchell
