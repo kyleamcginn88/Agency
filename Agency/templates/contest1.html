@@ -6,29 +6,30 @@
 {% block content %}
 <form action="contest1" method = "POST">
     {% csrf_token %}
-	<h1> Win a new single-track bike!</h1>
+	<h1 align="center"> Win a new single-track bike!</h1>
 	
 	<br></br>
-	<h4> Thanks to the competitors at Tour de Flagstaff</h4>
-	<h4> Futuristic bike contest (No purchase necessary)</h4>
+	<h4 align="center"> Thanks to the competitors at Tour de Flagstaff</h4>
+	<h4 align="center"> Futuristic bike contest (No purchase necessary)</h4>
 	
-	<img src="static/img/flexi_bike.jpg" alt="Flexibike" style="width:304px;height:228px" title="http://www.yankodesign.com/images/design_news/2013/10/17/flexi_bike.jpg">
 	
-	<br></br>
-	
-	<h3> Please fill out the information below, thank you.</h3>
+	<CENTER><img src="static/img/flexi_bike.jpg" alt="Flexibike" style="width:304px;height:228px" title="http://www.yankodesign.com/images/design_news/2013/10/17/flexi_bike.jpg"></CENTER>
 	
 	<br></br>
-	<p> Name: </p>
-    <p>{{form.name}}</p>
-	<p> Email: </p>
-	<p>{{form.email}}</p>
-	<p> Age: </p>
-	<p>{{form.age}}</p>
-	<p> Zip: </p>
-	<p>{{form.zip}}</p>
 
-    <input type="submit" value = "Submit"/>
+	<h3 align="center"> Please fill out the information below, thank you.</h3>
+	
+	<br></br>
+	<p align="center"> Name: </p>
+    <p align="center">{{form.name}}</p>
+	<p align="center"> Email: </p>
+	<p align="center">{{form.email}}</p>
+	<p align="center"> Age: </p>
+	<p align="center">{{form.age}}</p>
+	<p align="center"> Zip: </p>
+	<p align="center">{{form.zip}}</p>
+
+    <CENTER><input type="submit" value = "Submit"/></CENTER>
 </form>
 {% endblock %}
 
