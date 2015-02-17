@@ -26,7 +26,7 @@ def friend(request):
 		from3 = Friend3Form(request.POST)
 		if form3.is_valid():
 			x = Friend()
-			x.frist_name = form3.cleand_data["first_name"]
+			x.user_frist_name = form3.cleand_data["user_frist_name"]
 			x.age = form3.cleaned_data["age"]
 			x.user_email = form3.cleand_data["user_email"]
 			x.friend_name1 = form3.cleand_data["friend_name1"]

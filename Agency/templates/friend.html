@@ -1,8 +1,33 @@
 {% extends "base.html" %}
 
 {% block nav-movies %}class="active"{% endblock %}
-{% block titleBlock %} Movies{% endblock %}
+{% block titleBlock %} Friends{% endblock %}
 {% block content %}
-
+<form action="friend" method = "POST">
+    {% csrf_token %}
+	<h2> Invite a Friend</h2>
+	
+	
+	<br></br>
+	<p> Your Name: </p>
+    <p>{{form3.user_frist_name}}</p>
+	<p> Your Age: </p>
+	<p>{{form3.age}}</p>
+	<p> Your Email: </p>
+	<p>{{form3.user_email}}</p>
+	<p> Friend 1 Name: </p>
+    <p>{{form3.friend_name1}}</p>
+    <p> Friend 1 Email: </p>
+	<p>{{form3.friend_name1}}</p>
+    <p> Friend 2 Name: </p>
+    <p>{{form3.friend_name2}}</p>
+    <p> Friend 2 Email: </p>
+	<p>{{form3.friend_name2}}</p>
+    <p> Friend 3 Name: </p>
+    <p>{{form3.friend_name3}}</p>
+    <p> Friend 3 Email: </p>
+	<p>{{form3.friend_name3}}</p>
+    <input type="submit" value = "Submit"/>
+</form>
 
 {% endblock %}

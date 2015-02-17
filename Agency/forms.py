@@ -30,9 +30,9 @@ class Contest2Form(forms.Form):
 class Friend3Form(forms.Form):
     class Meta:
         model = Friend
-        fields = ['first_name','age','user_email','friend_name1','friend1_email',
+        fields = ['user_frist_name','age','user_email','friend_name1','friend1_email',
                       'friend_name2', 'friend2_email', 'friend_name3', 'friend3_email']
-    first_name = forms.CharField(max_length=128)
+    user_frist_name = forms.CharField(max_length=128)
     age = forms.IntegerField()
     user_email = forms.EmailField(label = "Your Email", required = True)
     friend_name1 = forms.CharField(max_length=128)
