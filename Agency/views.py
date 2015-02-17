@@ -25,18 +25,18 @@ def friend(request):
 	if request.method == 'POST':
 		from3 = Friend3Form(request.POST)
 		if form3.is_valid():
-			x = Friend()
-			x.user_frist_name = form3.cleand_data["user_frist_name"]
-			x.age = form3.cleaned_data["age"]
-			x.user_email = form3.cleand_data["user_email"]
-			x.friend_name1 = form3.cleand_data["friend_name1"]
-			x.friend1_email = form3.cleand_data["friend1_email"]
-			x.friend_name2 = form3.cleand_data["friend_name2"]
-			x.friend2_email = form3.cleand_data["friend2_email"]
-			x.friend_name3 = form3.cleand_data["friend_name3"]
-			x.friend3_email = form3.cleand_data["friend3_email"]
-			x.save()
-			return HttpResponseRedirect("/friend")
+			f = Friend()
+			f.user_frist_name = form3.cleand_data["user_frist_name"]
+			f.age = form3.cleaned_data["age"]
+			f.user_email = form3.cleand_data["user_email"]
+			f.friend_name1 = form3.cleand_data["friend_name1"]
+			f.friend1_email = form3.cleand_data["friend1_email"]
+			f.friend_name2 = form3.cleand_data["friend_name2"]
+			f.friend2_email = form3.cleand_data["friend2_email"]
+			f.friend_name3 = form3.cleand_data["friend_name3"]
+			f.friend3_email = form3.cleand_data["friend3_email"]
+			f.save()
+			return HttpResponseRedirect("/thanks")
 	elif request.method == 'GET':
 		form3 = Friend3Form()
 	else:
