@@ -14,7 +14,7 @@ class Contest2(models.Model):
 	phone = models.IntegerField()
 	
 class Friend(models.Model):
-	frist_name = models.CharField(default="", max_length=128)
+	user_frist_name = models.CharField(default="", max_length=128)
 	age = models.IntegerField()
 	user_email = models.EmailField()
 	friend_name1 = models.CharField(default="", max_length=128)
