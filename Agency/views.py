@@ -21,3 +21,11 @@ def contest2(request):
 	
 def contest3(request):
 	return render(request, 'contest3.html', {})
+
+def services(request):
+	return render(request, 'services.html', {})
+
+def contact(request):
+	return render(request, 'contact.html', {})
+
+

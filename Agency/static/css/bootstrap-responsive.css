@@ -158,7 +158,7 @@
     width: 470px;
   }
   .span4 {
-    width: 170px;
+    width: 370px;
   }
   .span3 {
     width: 270px;
@@ -221,7 +221,7 @@
   .row-fluid [class*="span"] {
     display: block;
     float: left;
-    width: 50%;
+    width: 100%;
     min-height: 30px;
     margin-left: 2.564102564102564%;
     *margin-left: 2.5109110747408616%;
