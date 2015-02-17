@@ -46,18 +46,18 @@ def contact(request):
 
 def friend(request):
     if request.method == 'POST':
-        from3 = Friend3Form(request.POST)
+        form3 = Friend3Form(request.POST)
         if form3.is_valid():
             f = Friend()
-            f.user_frist_name = form3.cleand_data["user_frist_name"]
+            f.user_frist_name = form3.cleaned_data["user_frist_name"]
             f.age = form3.cleaned_data["age"]
-            f.user_email = form3.cleand_data["user_email"]
-            f.friend_name1 = form3.cleand_data["friend_name1"]
-            f.friend1_email = form3.cleand_data["friend1_email"]
-            f.friend_name2 = form3.cleand_data["friend_name2"]
-            f.friend2_email = form3.cleand_data["friend2_email"]
-            f.friend_name3 = form3.cleand_data["friend_name3"]
-            f.friend3_email = form3.cleand_data["friend3_email"]
+            f.user_email = form3.cleaned_data["user_email"]
+            f.friend_name1 = form3.cleaned_data["friend_name1"]
+            f.friend1_email = form3.cleaned_data["friend1_email"]
+            f.friend_name2 = form3.cleaned_data["friend_name2"]
+            f.friend2_email = form3.cleaned_data["friend2_email"]
+            f.friend_name3 = form3.cleaned_data["friend_name3"]
+            f.friend3_email = form3.cleaned_data["friend3_email"]
             f.save()
             return HttpResponseRedirect("/thanks")
     elif request.method == 'GET':
