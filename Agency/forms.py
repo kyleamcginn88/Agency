@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.db import models
 from Agency.models import Contest1
 from Agency.models import Contest2
+from Agency.models import Friend
 
 class Contest1Form(forms.Form):
 
@@ -25,5 +26,20 @@ class Contest2Form(forms.Form):
 	email = forms.EmailField(label = "Your Email", required = True)
 	zip = forms.IntegerField()
 	phone = forms.IntegerField()
+
+class Friend3Form(forms.Form):
+    class Meta:
+        model = Friend
+        fields = ['first_name','age','user_email','friend_name1','friend1_email',
+                      'friend_name2', 'friend2_email', 'friend_name3', 'friend3_email']
+    first_name = forms.CharField(max_length=128)
+    age = forms.IntegerField()
+    user_email = forms.EmailField(label = "Your Email", required = True)
+    friend_name1 = forms.CharField(max_length=128)
+    friend1_email = forms.EmailField(label = "Friend 1", required = True)
+    friend_name2 = forms.CharField(max_length=128)
+    friend2_email = forms.EmailField(label = "Friend 2", required = True)
+    friend_name3 = forms.CharField(max_length=128)
+    friend3_email = forms.EmailField(label = "Friend 3", required = True)
 
 	
