@@ -1,11 +1,11 @@
 from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
-from Agency.models import Contest1, Contest2, Friend
+from Agency.models import Contest1, Contest2, Friend, Contest3
 from django import forms
 from django.http import HttpResponseRedirect
 from django.db import models
-from Agency.forms import Contest1Form, Contest2Form, Friend3Form
+from Agency.forms import Contest1Form, Contest2Form, Friend3Form, Contest3Form
 
 
 def home(request):
@@ -26,18 +26,6 @@ def about(request):
 
 def services(request):
     return render(request, 'services.html', {})
-
-
-def contest1(request):
-    return render(request, 'contest1.html', {})
-
-
-def contest2(request):
-    return render(request, 'contest1.html', {})
-
-
-def contest3(request):
-    return render(request, 'contest1.html', {})
 
 
 def contact(request):
@@ -66,10 +54,6 @@ def friend(request):
         return HttpResponseRedirect("/404/")
     return render(request, 'friend.html', {"form3": form3})
 
-"""def contest1(request):
-    return render(request,'contest1.html',
-        {'contest1': Contest1.objects.all()})"""
-
 
 def contest2(request):
     if request.method == 'POST':
@@ -92,7 +76,23 @@ def contest2(request):
 
 
 def contest3(request):
-    return render(request, 'contest3.html', {})
+    if request.method == 'POST':
+        form3 = Contest3Form(request.POST)
+        if form3.is_valid():
+            z = Contest3()
+            z.first_name = form3.cleaned_data["first_name"]
+            z.last_name = form3.cleaned_data["last_name"]
+            z.age = form3.cleaned_data["age"]
+            z.email = form3.cleaned_data["email"]
+            z.zip = form3.cleaned_data["zip"]
+            z.phone = form3.cleaned_data["phone"]
+            z.save()
+            return HttpResponseRedirect("/friend")
+    elif request.method == 'GET':
+        form3 = Contest3Form()
+    else:
+        return HttpResponseRedirect("/404/")
+    return render(request, "contest3.html", {"form3": form3})
 
 
 def contest1(request):

@@ -1,4 +1,36 @@
 {% extends "base.html" %}
 
+
 {% block nav-store %}class="active"{% endblock %}
-{% block titleBlock %}Store{% endblock %}
+{% block titleBlock %}Bugatti Veyron Sweepstakes{% endblock %}
+{% block content %}
+<form action="contest3" method = "POST">
+	{% csrf_token %}
+	<h1 align="center">Win a new Bugatti Veyron Supersport (Black & Orange)</h1>
+	<br><br>
+	<h4 align="center">Apply below for the car of your dreams!</h4>
+	<h4 align="center">NO PURCHASE NECESSARY</h4>
+	
+	<CENTER><img src="static/img/Bugatti.jpg" alt="Bugatti" style="width:636px;height:358px" title="http://jalopnik.com/bugatti-veyron-super-sport-stripped-of-worlds-fastest-470992327"></CENTER>
+	<br><br>
+	
+	<h3 align="center"> Please fill out the following information below, thank you.</h3>
+	
+	<br><br>
+	
+	<p align="center"> First Name: </p>
+    <p align="center">{{form3.first_name}}</p>
+	<p align="center"> Last Name: </p>
+    <p align="center">{{form3.last_name}}</p>
+	<p align="center"> Email: </p>
+	<p align="center">{{form3.email}}</p>
+	<p align="center"> Age: </p>
+	<p align="center">{{form3.age}}</p>
+	<p align="center"> Zip: </p>
+	<p align="center">{{form3.zip}}</p>
+	<p align="center"> Phone: </p>
+	<p align="center">{{form3.phone}}</p>
+	
+	<CENTER><input type="submit" value="Submit"/></CENTER>
+</form>
+{% endblock %}
