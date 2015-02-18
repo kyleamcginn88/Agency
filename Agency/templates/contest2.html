@@ -3,6 +3,7 @@
 {% block nav-store %}class="active"{% endblock %}
 {% block titleBlock %}Imagine Dragons Sweepstakes{% endblock %}
 {% block content %}
+<h3 align="center">
 <form action="contest2" method="POST">
 	{% csrf_token %}
 	<h2> Enter the Imagine Dragons Sweepstakes </h2>
@@ -38,5 +39,5 @@
 	<p>{{form2.phone}}</p>
 	<input type="submit" value="Submit"/>
 </form>
-	
+	</h3>
 {% endblock %}
