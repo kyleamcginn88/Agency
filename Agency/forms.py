@@ -8,12 +8,14 @@ from Agency.models import Contest1, Contest2, Contest3, Friend
 class Contest1Form(forms.Form):
     class Meta:
         model = Contest1
-        fields = ['email', 'first_name', 'last_name', 'age', 'zip']
+        fields = ['email', 'first_name', 'last_name', 'age', 'zip', 'phone']
 
     email = forms.EmailField(label="Your email", required=True)
     first_name = forms.CharField(max_length=128, required=True)
+    last_name = forms.CharField(max_length=128, required=True)
     zip = forms.IntegerField(required=True)
     age = forms.IntegerField(required=True)
+    phone = forms.IntegerField(required=True)
 
 
 class Contest2Form(forms.Form):

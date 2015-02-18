@@ -6,6 +6,8 @@ class Contest1(models.Model):
     first_name = models.CharField(default="", max_length=128)
     last_name = models.CharField(default="", max_length=128)
     age = models.IntegerField()
+    phone = models.IntegerField()
+    zip = models.IntegerField()
 
 
 class Contest2(models.Model):

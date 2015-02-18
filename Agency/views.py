@@ -98,8 +98,10 @@ def contest1(request):
             c = Contest1()
             c.email = form.cleaned_data["email"]
             c.age = form.cleaned_data["age"]
-            c.name = form.cleaned_data["name"]
-            c.zip = form2.cleaned_data["zip"]
+            c.first_name = form.cleaned_data["name"]
+            c.last_name = form.cleaned_data["name"]
+            c.zip = form.cleaned_data["zip"]
+            c.phone = form.cleaned_data["phone"]
             c.save()
             return HttpResponseRedirect("/friend")
     elif request.method == 'GET':
