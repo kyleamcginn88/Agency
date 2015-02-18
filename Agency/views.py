@@ -30,7 +30,7 @@ def contact(request):
 
 def friend(request):
     if request.method == 'POST':
-        form3  = Friend3Form(request.POST)
+        form3 = Friend3Form(request.POST)
         if form3.is_valid():
             f = Friend()
             f.user_frist_name = form3.cleaned_data["user_frist_name"]

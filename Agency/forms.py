@@ -8,14 +8,14 @@ from Agency.models import Contest1, Contest2, Contest3, Friend
 class Contest1Form(forms.Form):
     class Meta:
         model = Contest1
-        fields = ['email', 'first_name','last_name', 'age', 'zip']
+        fields = ['email', 'first_name', 'last_name', 'age', 'zip']
 
     email = forms.EmailField(label="Your email", required=True)
     first_name = forms.CharField(max_length=128, required=True)
     zip = forms.IntegerField(required=True)
     age = forms.IntegerField(required=True)
 
-	
+
 class Contest2Form(forms.Form):
     class Meta:
         model = Contest2
@@ -26,8 +26,8 @@ class Contest2Form(forms.Form):
     email = forms.EmailField(label="Your Email", required=True)
     zip = forms.IntegerField(required=True)
     phone = forms.IntegerField(required=True)
-	
-	
+
+
 class Contest3Form(forms.Form):
     class Meta:
         model = Contest3
@@ -39,7 +39,7 @@ class Contest3Form(forms.Form):
     zip = forms.IntegerField(required=True)
     phone = forms.IntegerField(required=True)
 
-	
+
 class Friend3Form(forms.Form):
     class Meta:
         model = Friend

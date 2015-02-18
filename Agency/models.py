@@ -1,10 +1,12 @@
 from django.db import models
 
+
 class Contest1(models.Model):
     email = models.EmailField()
     first_name = models.CharField(default="", max_length=128)
     last_name = models.CharField(default="", max_length=128)
     age = models.IntegerField()
+
 
 class Contest2(models.Model):
     first_name = models.CharField(default="", max_length=128)
@@ -14,6 +16,7 @@ class Contest2(models.Model):
     zip = models.IntegerField()
     phone = models.IntegerField()
 
+
 class Contest3(models.Model):
     first_name = models.CharField(default="", max_length=128)
     last_name = models.CharField(default="", max_length=128)
@@ -21,6 +24,7 @@ class Contest3(models.Model):
     email = models.EmailField()
     zip = models.IntegerField()
     phone = models.IntegerField()
+
 
 class Friend(models.Model):
     user_frist_name = models.CharField(default="", max_length=128)
